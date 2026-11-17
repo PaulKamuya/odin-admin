@@ -70,12 +70,17 @@ input{
   padding: 0.2em 1em;
   border-radius: 12px;
   border: 1px solid var(--primary);
+  color: var(--primary);
 }
 
 input:focus{
   outline-width: 1px;
   outline-offset: 4px;
   outline-color: #243b64a4;
+}
+
+input:hover{
+  background-color: var(--secondary);
 }
 
 .user-profile{
@@ -188,6 +193,23 @@ button:hover{
   grid-template-columns: max-content 1fr;
   gap: 0.3rem;
   align-items: center;
+  padding: 2px 4px;
+  border-radius: 6px;
+  transition: all o.2s ease-in-out;
+}
+
+.friends > img{
+  border: 1px solid transparent;
+}
+
+.friends:hover{
+  background-color: var(--primary);
+  color: var(--accent);
+  cursor: pointer;
+}
+
+.friends:hover > img{
+  border-color:var(--accent);
 }
 
 .container > div:not(.friends){
