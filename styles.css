@@ -2,5 +2,193 @@
   --primary: #243B64; /*Midnight Blue*/
   --secondary: #E8EDF5; /*Cool Mist*/
   --accent: #F8FAFC; /*Soft Ivory*/
+
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  font-size: 16px;
+  color: var(--primary);
 }
 
+*{
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  height: 100vh;
+  background-color: var(--secondary);
+}
+
+/* sidebar */
+.sidebar-container{
+  grid-column: 1;
+  background-color: var(--primary);
+  color: var(--secondary);
+  padding: 1rem;
+}
+
+.sidebar-header{
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.sidebar-options{
+  font-size: 1.3rem;
+  margin-bottom: 2em;
+}
+
+.sidebar-options > div{
+  margin-bottom: 0.5rem;
+}
+
+.sidebar-options > div:hover{
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+
+/* right column */
+.right-column{
+  display: grid;
+  grid-template-rows: max-content 1fr;
+}
+
+.top-container{
+  padding: 1rem 2rem 0.2rem 2rem;
+  display: grid;
+  grid: 1fr 1fr / 1fr 1fr;
+  gap: 1rem;
+  align-items: center;
+}
+
+input{
+  width: 50%;
+  font-size: 1rem;
+  padding: 0.2em 1em;
+  border-radius: 12px;
+  border: 1px solid var(--primary);
+}
+
+input:focus{
+  outline-width: 1px;
+  outline-offset: 4px;
+  outline-color: #243b64a4;
+}
+
+.user-profile{
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+[class^='bold']{
+  font-weight: bold;
+}
+
+[class^=small]{
+  font-size: 0.8em;
+}
+
+[class$='large']{
+  font-size: 1.2rem;
+}
+
+.pfp{
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.mini{
+  width: 40px;
+  height: 40px;
+}
+
+.current{
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 1rem;
+  align-items: center;
+}
+
+button{
+  background-color: var(--primary);
+  color: var(--accent);
+  font-size: 1rem;
+  padding: 0.6em 2em;
+  border: none;
+  border-radius: 1em;
+  margin-right: 0.3em;
+}
+
+.main-grid{
+  background-color: var(--accent);
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1rem;
+}
+
+.project-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: max-content 1fr 1fr 1fr;
+  grid-auto-flow: row;
+  grid-auto-rows: 1fr;
+  gap: 1rem;
+}
+
+.project-container > p{
+  grid-column: 1 / 3;
+}
+
+.card{
+  background-color: var(--secondary);
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.minor-grid{
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-auto-rows: max-content;
+  grid-auto-flow: row;
+  gap: 1rem;
+}
+
+.minor-container{
+  display: grid;
+  grid-template-rows: max-content 1fr;
+  gap: 1rem;
+}
+
+.container{
+  background-color: var(--secondary);
+  padding: 1rem;
+  border-radius: 10px;
+  display: grid;
+  gap: 0.3rem;
+}
+
+.friends{
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0.3rem;
+  align-items: center;
+}
+
+.container > div:not(.friends){
+  align-self: center;
+  justify-self: center;
+}
+
+.container > div:not(.friends):nth-child(2){
+  border-top: 1px solid var(--primary);
+  border-bottom: 1px solid var(--primary);
+  padding: 0.5em;
+}
